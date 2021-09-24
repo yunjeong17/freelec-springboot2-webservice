@@ -22,13 +22,15 @@ dependencies {
 
     // lombok
     implementation('org.projectlombok:lombok')
+    implementation 'junit:junit:4.13.1'
+    implementation 'junit:junit:4.13.1'
     annotationProcessor('org.projectlombok:lombok')
     testImplementation('org.projectlombok:lombok')
     testAnnotationProcessor('org.projectlombok:lombok')
 
-    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
-    implementation("org.mariadb.jdbc:mariadb-java-client")
-    implementation('com.h2database:h2')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa') //스프링부트용 spring data jpa 추상화 라이브러리, 스프링부트 버전에 맞춰 자동으로 jpa 관련 라이브러리들의 버전 관리
+    implementation("org.mariadb.jdbc:mariadb-java-client") //mariadb이용
+    implementation('com.h2database:h2') // 인메모리 관계형 데이터 베이스, 별도 설치 없이 프로젝트 의존성만으로 관리 가능, 메모리에서 실행되기 때문에 애플리케이션 재시작마다 초기화,jpa테스트 및 로컬환경에서의 구동에서 사용
 
 //    implementation('org.springframework.boot:spring-boot-starter-oauth2-client') // 권한 관련
 //    implementation('org.springframework.session:spring-session-jdbc') // 권한 관련
