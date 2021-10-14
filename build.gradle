@@ -16,9 +16,8 @@ repositories {
 }
 
 dependencies {
-    //(3)
     implementation('org.springframework.boot:spring-boot-starter-web')
-    implementation('org.springframework.boot:spring-boot-starter-mustache')
+    implementation('org.springframework.boot:spring-boot-starter-mustache') //머스테치 사용을 위한 의존성
 
     // lombok
     implementation('org.projectlombok:lombok')
@@ -40,6 +39,10 @@ dependencies {
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    // https://mvnrepository.com/artifact/org.jsoup/jsoup
+    implementation group: 'org.jsoup', name: 'jsoup', version: '1.13.1'
+
 }
 
 test { //Junit5를 사용하기 위해서는 필수로 선언

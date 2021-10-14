@@ -1,5 +1,6 @@
 package com.yun.book.springboot.domain.post;
 
+import com.yun.book.springboot.domain.BaseTimeEntity;
 import javafx.geometry.Pos;
 import lombok.Builder;
 import lombok.Getter;
@@ -13,7 +14,7 @@ import javax.persistence.*;
 @Getter //롬복 어노테이션, getter를 자동 생성
 @NoArgsConstructor //롬복 어노테이션, 기본 생성자 자동 생성
 @Entity //jpa 어노테이션
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id //pk
     @GeneratedValue(strategy= GenerationType.IDENTITY) //auto increment
